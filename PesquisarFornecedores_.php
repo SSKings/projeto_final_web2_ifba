@@ -36,7 +36,7 @@ if ($nome == '' && $id == '') {
 if ($nome != '' && $id == '') {
   $stmt = $conn->prepare("SELECT id, nome, endereco, email, telefone FROM `fornecedor` WHERE nome =? AND usuario_id = ?;");
   
-  $stmt->bind_param("si", $nome, $usuario_id );
+  $stmt->bind_param("si", $nome, $usuario_id ); 
 }
 
 if ($nome == '' && $id != '') {
